@@ -12,29 +12,83 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-900 via-pink-900 to-orange-900">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1613909671501-f9678ffc1d33?w=1920)',
-            filter: 'grayscale(30%)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-pink-900/60 to-orange-900/60" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-serif mb-6 tracking-wide animate-fade-in">
+          <h1 className="text-6xl md:text-8xl font-serif mb-6 tracking-wide animate-fade-in text-white drop-shadow-2xl">
             Outfit Your Grind
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 font-light tracking-wide">
+          <p className="text-xl md:text-2xl text-white mb-12 font-light tracking-wide drop-shadow-lg">
             Premium Clothing & Elegant Jewellery
           </p>
           <Button
             onClick={() => navigate('/shop')}
-            className="bg-white text-black px-8 py-6 text-lg rounded-md hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
+            className="bg-white text-purple-900 px-8 py-6 text-lg rounded-lg hover:bg-pink-100 transition-all duration-300 transform hover:scale-105 shadow-2xl font-semibold"
           >
             Explore Collection
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
+        </div>
+      </section>
+
+      {/* Category Showcase - Moved to Top */}
+      <section className="py-20 px-4 bg-gradient-to-r from-pink-50 to-purple-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-800">Shop By Category</h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Discover our exclusive collections</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              className="relative h-96 rounded-2xl overflow-hidden group cursor-pointer shadow-2xl"
+              onClick={() => navigate('/shop?category=clothing')}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1591884807235-1dc6c2e148b1?w=800"
+                alt="Clothing"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 via-purple-600/40 to-transparent group-hover:from-purple-800/90 transition-all duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-5xl font-serif mb-4 text-white drop-shadow-lg">Clothing</h3>
+                  <p className="text-white text-lg mb-6 drop-shadow-md">Premium fashion essentials</p>
+                  <Button
+                    className="bg-white text-purple-900 hover:bg-pink-100 transition-all duration-300 shadow-lg"
+                  >
+                    Shop Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="relative h-96 rounded-2xl overflow-hidden group cursor-pointer shadow-2xl"
+              onClick={() => navigate('/shop?category=jewellery')}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1758995115682-1452a1a9e35b?w=800"
+                alt="Jewellery"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-900/80 via-pink-600/40 to-transparent group-hover:from-pink-800/90 transition-all duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-5xl font-serif mb-4 text-white drop-shadow-lg">Jewellery</h3>
+                  <p className="text-white text-lg mb-6 drop-shadow-md">Elegant luxury pieces</p>
+                  <Button
+                    className="bg-white text-pink-900 hover:bg-pink-100 transition-all duration-300 shadow-lg"
+                  >
+                    Shop Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
