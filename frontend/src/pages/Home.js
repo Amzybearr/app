@@ -189,78 +189,43 @@ const Home = () => {
       </section>
 
       {/* Why Shopiverse */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-b from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-16">Why Amzélle</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-gray-800">Why Amzélle</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {whyUs.map((item, index) => (
               <div
                 key={index}
-                className="text-center transform transition-all duration-500 hover:scale-105"
+                className="text-center transform transition-all duration-500 hover:scale-105 bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl"
                 style={{
                   animationDelay: `${index * 150}ms`,
                   animation: 'fade-in 0.8s ease-out forwards',
                   opacity: 0
                 }}
               >
-                <h3 className="text-2xl font-serif mb-4">{item.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{item.description}</p>
+                <h3 className="text-2xl font-serif mb-4 text-purple-700">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Category Showcase */}
-      <section className="py-20 px-4 bg-gray-950">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div
-              className="relative h-96 rounded-lg overflow-hidden group cursor-pointer"
-              onClick={() => navigate('/shop?category=clothing')}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1591884807235-1dc6c2e148b1?w=800"
-                alt="Clothing"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <h3 className="text-4xl font-serif mb-4">Clothing</h3>
-                  <Button
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    Shop Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="relative h-96 rounded-lg overflow-hidden group cursor-pointer"
-              onClick={() => navigate('/shop?category=jewellery')}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1758995115682-1452a1a9e35b?w=800"
-                alt="Jewellery"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <h3 className="text-4xl font-serif mb-4">Jewellery</h3>
-                  <Button
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    Shop Now
-                  </Button>
-                </div>
-              </div>
-            </div>
+      {/* Newsletter CTA */}
+      <section className="py-16 bg-gradient-to-r from-purple-700 via-pink-700 to-orange-700">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-serif mb-4 text-white">Stay Updated</h2>
+          <p className="text-white/90 text-lg mb-8">Subscribe to get special offers, free giveaways, and exclusive deals.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-xl mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full sm:flex-1 px-6 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-4 focus:ring-white/50"
+            />
+            <Button className="bg-white text-purple-700 hover:bg-pink-100 px-8 py-4 font-semibold shadow-lg">
+              Subscribe
+            </Button>
           </div>
         </div>
       </section>
