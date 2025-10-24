@@ -143,21 +143,46 @@ const Home = () => {
       </section>
 
       {/* Trust Badges */}
-      <section className="py-16 bg-gradient-to-r from-gray-950 to-black">
+      <section className="py-16 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12 opacity-90">
+          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12 text-white">
             24/7 Support • Multiple Payment Options • Trusted Worldwide • Shipping Worldwide
           </h2>
           
-          <div className="flex justify-center items-center space-x-8">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-red-900 to-red-700 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
-              <span className="text-white text-4xl font-bold">M</span>
+          <div className="flex justify-center items-center space-x-12 flex-wrap gap-6">
+            {/* Mastercard */}
+            <div className="bg-white p-6 rounded-2xl shadow-2xl transform hover:scale-110 transition-transform duration-300 w-32 h-24 flex items-center justify-center">
+              <svg viewBox="0 0 152.407 108" className="w-full h-full">
+                <g>
+                  <rect width="152.407" height="108" fill="none"/>
+                  <g>
+                    <rect x="60.4117" y="25.6968" width="31.5" height="56.6064" fill="#FF5F00"/>
+                    <path d="M382.20839,306a35.9375,35.9375,0,0,1,13.7499-28.3032,36,36,0,1,0,0,56.6064A35.938,35.938,0,0,1,382.20839,306Z" transform="translate(-319.79649 -252)" fill="#EB001B"/>
+                    <path d="M454.20349,306a35.99867,35.99867,0,0,1-58.2452,28.3032,36.00518,36.00518,0,0,0,0-56.6064A35.99867,35.99867,0,0,1,454.20349,306Z" transform="translate(-319.79649 -252)" fill="#F79E1B"/>
+                  </g>
+                </g>
+              </svg>
             </div>
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
-              <span className="text-white text-4xl font-bold">P</span>
+
+            {/* Visa */}
+            <div className="bg-white p-6 rounded-2xl shadow-2xl transform hover:scale-110 transition-transform duration-300 w-32 h-24 flex items-center justify-center">
+              <svg viewBox="0 0 152.407 108" className="w-full h-full">
+                <g>
+                  <rect width="152.407" height="108" fill="none"/>
+                  <path d="M60.5,50.5l-6.3,26.7H48l6.3-26.7H60.5z M94.5,56.1c-1.2-0.5-3.2-1-5.6-1c-6.1,0-10.5,3.3-10.5,7.9c0,3.4,3.1,5.3,5.4,6.5c2.4,1.2,3.2,2,3.2,3.1c0,1.6-2,2.4-3.8,2.4c-2.5,0-3.9-0.4-5.9-1.3l-0.8-0.4l-0.9,5.3c1.5,0.7,4.2,1.3,7,1.3c6.5,0,10.7-3.2,10.8-8.2c0-2.7-1.6-4.8-5.2-6.5c-2.2-1.1-3.5-1.8-3.5-2.9c0-1,1.1-2,3.6-2c2.1,0,3.5,0.4,4.7,0.9l0.6,0.3L94.5,56.1z M107.1,50.5h-4.7c-1.5,0-2.6,0.4-3.2,2l-9.2,24.7h6.5l1.3-3.6h8l0.8,3.6h5.7L107.1,50.5z M100.8,68.8l3.3-9.1l1.9,9.1H100.8z M72.6,50.5l-5.1,26.7h-6.6l5.1-26.7H72.6z" fill="#1434CB"/>
+                </g>
+              </svg>
             </div>
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-green-900 to-green-700 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
-              <span className="text-white text-4xl font-bold">A</span>
+
+            {/* PayPal */}
+            <div className="bg-white p-6 rounded-2xl shadow-2xl transform hover:scale-110 transition-transform duration-300 w-32 h-24 flex items-center justify-center">
+              <svg viewBox="0 0 152.407 108" className="w-full h-full">
+                <g>
+                  <rect width="152.407" height="108" fill="none"/>
+                  <path d="M59.5,45.5c2.8,0,5.4,0.2,7.4,1.1c2.3,1,3.5,3,3.5,5.8c0,5.4-3.5,8.6-9.2,8.6h-2.9l1.9-11.2c0.1-0.6,0.5-1,1.1-1.1C60.6,48.5,60.1,45.5,59.5,45.5z M56.1,36.5c-1.5,0-2.8,1.1-3,2.6l-5.6,32.9c-0.1,0.9,0.5,1.7,1.4,1.7h8.7c1.5,0,2.8-1.1,3-2.6l1.3-7.6h4.2c11,0,18.2-7.3,19.9-17.3c0.8-4.7-0.1-8.4-2.6-11.1C80.6,32.1,76,30.5,70,30.5H56.1z" fill="#003087"/>
+                  <path d="M93.5,45.5c2.8,0,5.4,0.2,7.4,1.1c2.3,1,3.5,3,3.5,5.8c0,5.4-3.5,8.6-9.2,8.6h-2.9l1.9-11.2c0.1-0.6,0.5-1,1.1-1.1C94.6,48.5,94.1,45.5,93.5,45.5z M90.1,36.5c-1.5,0-2.8,1.1-3,2.6l-5.6,32.9c-0.1,0.9,0.5,1.7,1.4,1.7h8.7c1.5,0,2.8-1.1,3-2.6l1.3-7.6h4.2c11,0,18.2-7.3,19.9-17.3c0.8-4.7-0.1-8.4-2.6-11.1C114.6,32.1,110,30.5,104,30.5H90.1z" fill="#0070E0"/>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
