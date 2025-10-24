@@ -136,18 +136,18 @@ const Shop = () => {
           <div className="flex-1">
             {filteredProducts.length === 0 ? (
               <div className="text-center py-20">
-                <p className="text-gray-400 text-lg">No products found matching your criteria.</p>
+                <p className="text-gray-600 text-lg">No products found matching your criteria.</p>
               </div>
             ) : (
               <>
-                <p className="text-gray-400 mb-6">
+                <p className="text-gray-600 mb-6">
                   {filteredProducts.length} {filteredProducts.length === 1 ? 'product' : 'products'}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filteredProducts.map((product) => (
                     <Card
                       key={product.id}
-                      className="group bg-gray-900 border-gray-800 overflow-hidden cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                      className="group bg-white border-purple-200 overflow-hidden cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-purple-400"
                       onClick={() => navigate(`/product/${product.id}`)}
                     >
                       <div className="relative overflow-hidden aspect-square">
@@ -156,16 +156,16 @@ const Shop = () => {
                           alt={product.name}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
                       </div>
                       <div className="p-6">
-                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+                        <p className="text-xs text-purple-600 uppercase tracking-wider mb-2 font-semibold">
                           {product.category}
                         </p>
-                        <h3 className="text-lg font-medium mb-2 group-hover:text-gray-300 transition-colors">
+                        <h3 className="text-lg font-medium mb-2 text-gray-800 group-hover:text-purple-700 transition-colors">
                           {product.name}
                         </h3>
-                        <p className="text-xl font-light">${product.price.toFixed(2)}</p>
+                        <p className="text-xl font-semibold text-pink-600">${product.price.toFixed(2)}</p>
                       </div>
                     </Card>
                   ))}
