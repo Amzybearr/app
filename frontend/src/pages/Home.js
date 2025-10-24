@@ -93,16 +93,16 @@ const Home = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-purple-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4">Featured Collection</h2>
-          <p className="text-center text-gray-400 mb-12">Handpicked pieces for the discerning individual</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-800">Featured Collection</h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Handpicked pieces for the discerning individual</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProducts.map((product, index) => (
               <Card
                 key={product.id}
-                className="group bg-gray-900 border-gray-800 overflow-hidden cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                className="group bg-white border-purple-200 overflow-hidden cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-purple-400"
                 onClick={() => navigate(`/product/${product.id}`)}
                 style={{
                   animationDelay: `${index * 100}ms`,
@@ -116,16 +116,16 @@ const Home = () => {
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 </div>
                 <div className="p-6">
-                  <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+                  <p className="text-xs text-purple-600 uppercase tracking-wider mb-2 font-semibold">
                     {product.category}
                   </p>
-                  <h3 className="text-lg font-medium mb-2 group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-lg font-medium mb-2 text-gray-800 group-hover:text-purple-700 transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-xl font-light">${product.price.toFixed(2)}</p>
+                  <p className="text-xl font-semibold text-pink-600">${product.price.toFixed(2)}</p>
                 </div>
               </Card>
             ))}
@@ -134,8 +134,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Button
               onClick={() => navigate('/shop')}
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-6 text-lg"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all duration-300 px-8 py-6 text-lg shadow-lg"
             >
               View All Products
             </Button>
