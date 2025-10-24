@@ -72,7 +72,7 @@ const Shop = () => {
               <div className={`space-y-8 ${showFilters ? 'block' : 'hidden lg:block'}`}>
                 {/* Category Filter */}
                 <div>
-                  <h3 className="text-sm font-semibold mb-4 text-gray-400 uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold mb-4 text-gray-600 uppercase tracking-wider">
                     Category
                   </h3>
                   <div className="space-y-2">
@@ -80,10 +80,10 @@ const Shop = () => {
                       <button
                         key={category}
                         onClick={() => setSelectedCategory(category)}
-                        className={`block w-full text-left px-4 py-2 rounded-md transition-colors ${
+                        className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
                           selectedCategory === category
-                            ? 'bg-white text-black'
-                            : 'bg-gray-900 text-gray-300 hover:bg-gray-800'
+                            ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                            : 'bg-white text-gray-700 hover:bg-purple-100 border border-purple-200'
                         }`}
                       >
                         {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -94,7 +94,7 @@ const Shop = () => {
 
                 {/* Price Range */}
                 <div>
-                  <h3 className="text-sm font-semibold mb-4 text-gray-400 uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold mb-4 text-gray-600 uppercase tracking-wider">
                     Price Range
                   </h3>
                   <div className="space-y-4">
@@ -104,9 +104,9 @@ const Shop = () => {
                       max="300"
                       value={priceRange[1]}
                       onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
-                      className="w-full accent-white"
+                      className="w-full accent-purple-600"
                     />
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-gray-600 text-sm">
                       Up to ${priceRange[1]}
                     </p>
                   </div>
@@ -114,13 +114,13 @@ const Shop = () => {
 
                 {/* Sort By */}
                 <div>
-                  <h3 className="text-sm font-semibold mb-4 text-gray-400 uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold mb-4 text-gray-600 uppercase tracking-wider">
                     Sort By
                   </h3>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-900 text-white px-4 py-2 rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    className="w-full bg-white text-gray-700 px-4 py-2 rounded-lg border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400"
                   >
                     <option value="featured">Featured</option>
                     <option value="price-low">Price: Low to High</option>
