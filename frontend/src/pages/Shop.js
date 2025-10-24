@@ -49,8 +49,8 @@ const Shop = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-5xl font-serif mb-4">Shop Collection</h1>
-          <p className="text-gray-400 text-lg">
+          <h1 className="text-5xl font-serif mb-4 text-gray-800">Shop Collection</h1>
+          <p className="text-gray-600 text-lg">
             {searchQuery ? `Search results for "${searchQuery}"` : 'Discover our curated selection'}
           </p>
         </div>
