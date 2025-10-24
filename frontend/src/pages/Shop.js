@@ -45,7 +45,7 @@ const Shop = () => {
     });
 
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-12">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50 text-gray-800 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
